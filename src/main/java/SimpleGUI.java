@@ -35,7 +35,6 @@ public class SimpleGUI extends JFrame{
         this.add(buttonPanel);
         aliveFont = new Font(Font.MONOSPACED, Font.PLAIN, 12);
         //Creating strikethrough font
-        //gui.createLabel(String.format("%-10s %-17s %-8s %15s", "Rank", "Name", "Level", "XP"), true);
         Map attributes = (new Font(Font.MONOSPACED, Font.BOLD, 12)).getAttributes();
         attributes.put(TextAttribute.STRIKETHROUGH, TextAttribute.STRIKETHROUGH_ON);
         deadFont = new Font(attributes);
@@ -77,7 +76,7 @@ public class SimpleGUI extends JFrame{
         this.createLabel(String.format("%-10s %-17s %-8s %15s", "Rank", "Name", "Level", "XP"), true);
         try {
             DomNodeList<DomNode> domList = webScraper.scrapePage(baseUrl + pageNumber);
-            //Parse columns in row (aka Users)
+            //Parse columns in row (User Data)
             for(DomNode node : domList){
                 HtmlElement htmlElement = (HtmlElement) node;
                 String data = htmlElement.getTextContent();

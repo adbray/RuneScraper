@@ -25,8 +25,6 @@ public class WebScraper {
         return page.querySelectorAll(".personal-hiscores__table tr");
     }
 
-    public static void main(String[] args){
-        SimpleGUI gui = new SimpleGUI();
-    }
+
 
 }
